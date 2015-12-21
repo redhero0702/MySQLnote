@@ -323,3 +323,146 @@ WHERE column_name operator value
 GROUP BY column_name
 HAVING aggregate_function(column_name) operator value;
 ```
+
+SQL commandlines 
+-----------------------------------
+
+
+
+- Show databases, tables, and fields
+
+```bash
+mysqlshow [-h ipAddress] -u user_name -p
+mysqlshow -u user_name@ipAddress -p
+```
+
+- List all databases
+
+```bash
+mysqlshow -u user_name -p db_name
+```
+
+- List all fields from database_name' table_name
+
+```bash
+mysqlshow -u user_name -p db_name table_name
+```
+
+- List 'field_name' from database_name' table_name
+
+```bash
+mysqlshow -u user_name -p db_name table_name field_name
+```
+
+- Change current system login user password
+
+```bash
+mysqladmin password 'new_password'
+```
+
+- Run sql script in db_name
+
+```bash
+mysql db_name < sql_filename.sql
+```
+
+- Connect to MySQL
+
+```bash
+mysql [-h ipAddress] -u user_name -ppassword
+mysql [-h ipAddress] -u user_name -p
+```
+
+- Use the databases 'database_name'
+
+```sql
+USE db_name
+```
+
+- List current default database name
+
+```sql
+SELECT DATABASE();
+```
+
+- List all databases;
+
+```sql
+SHOW DATABASES;
+```
+
+- List all databases which the names starts with 'my'
+
+```sql
+SHOW DATABASES LIKE 'my%';
+```
+
+- List all tables from db_name
+
+```sql
+SHOW TABLES FROM db_name [LIKE ...];
+```
+
+- List all fields from table_name
+
+```sql
+ SHOW COLUMNS FROM table_name [LIKE ...];
+ SHOW COLUMNS FROM table_name FROM db_name [LIKE ...];
+ SHOW FIELDS FROM table_name [LIKE ...];
+ DESCRIBE table_name ;
+ EXPLAIN table_name ;
+```
+
+- List all index from table_name
+
+```sql
+ SHOW INDEX FROM table_name [LIKE ...];
+ SHOW INDEX FROM table_name FROM db_name [LIKE ...];
+ SHOW KEY FROM table_name [LIKE ...];
+```
+
+- List all tables status
+
+```sql
+ SHOW TABLE STATUS;
+ SHOW TABLE STATUS FROM db_name [LIKE ...];
+```
+
+- show MySQL variables
+
+```sql
+ SHOW VARIABLES [LIKE ...];
+```
+
+- show a database's locale settings
+
+```sql
+ SHOW VARIABLES LIKE '%character%' ;
+```
+
+- List all threads connected to MySQL
+
+```sql
+ SHOW PROCESSLIST;
+```
+
+- show mySQL status
+
+```sql
+ SHOW STATUS;
+```
+
+- Lock a table to ensure the database integrity (READ: READ ONLY, WRITE: CANNOT READ AND WRITE)
+
+```sql
+ LOCK TABLE table_name READ;
+ FLUSH TABLES;
+```
+
+- Unlock a table
+
+```sql
+ UNLOCK TABLE;
+```
+
+
