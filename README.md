@@ -3,9 +3,11 @@ MySQL syntax
 
 SELECT SYNTAX
 ---------------------
+```mysql
 SELECT column_name,column_name
 FROM table_name;
 UNION EXAMPLE
+```
 
 
 SELECT c.City as CITYNAME FROM Customers as c WHERE c.City LIKE "A%"
@@ -219,4 +221,3 @@ FROM table_name
 WHERE column_name operator value
 GROUP BY column_name
 HAVING aggregate_function(column_name) operator value;
-
