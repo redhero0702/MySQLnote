@@ -63,10 +63,10 @@ ORDER BY Several Columns Example
 ----------------------------------------------------
 SELECT * FROM Customers
 ORDER BY Country ASC, CustomerName DESC;
-UNION SYNTAX
 
-combines the result of more SELECT statements (selects only distinct values by default)
+UNION SYNTAX
 --------------------------------------------------------------------------------------------
+- combines the result of more SELECT statements (selects only distinct values by default)
 SELECT column_name(s) FROM table1
 UNION
 SELECT column_name(s) FROM table2;
@@ -213,7 +213,7 @@ City varchar(255)
 
 HAVING SYNTAX
 ------------------------------------------------------------------
-# The HAVING clause was added to SQL because the WHERE keyword could not be used with aggregate functions.
+- The HAVING clause was added to SQL because the WHERE keyword could not be used with aggregate functions.
 SELECT column_name, aggregate_function(column_name)
 FROM table_name
 WHERE column_name operator value
