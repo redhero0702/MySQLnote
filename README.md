@@ -3,7 +3,7 @@ MySQL syntax
 
 SELECT SYNTAX
 ---------------------
-```mysql
+```sql
 SELECT column_name,column_name
 FROM table_name;
 UNION EXAMPLE
